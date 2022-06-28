@@ -1,13 +1,38 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>PersonalPortfolio</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script>
+    function updatemenu() {
+      if (document.getElementById('responsive-menu').checked == true) {
+        document.getElementById('menu').style.borderBottomRightRadius = '0';
+        document.getElementById('menu').style.borderBottomLeftRadius = '0';
+      } else {
+        document.getElementById('menu').style.borderRadius = '10px';
+      }
+    }
+  </script>
 </head>
+
 <body>
+  <nav id='menu'>
+    
+    <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+    <ul>
+      <li><a>Miguel Rodríguez González</a></li>
+      <li><a href=''>About</a></li>
+      <li><a href=''>Experiencia</a></li>
+      <li><a href=''>Contacto</a></li>
+      <li><a href=''>Educación</a></li>
+      <li><a href=''>Certificados</a></li>
+    </ul>
+  </nav>
   <app-root></app-root>
 </body>
+
 </html>
